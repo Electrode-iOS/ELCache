@@ -1,6 +1,6 @@
 //
 //  URLCache+UIImage.swift
-//  SwallowExample
+//  THGCache
 //
 //  Created by Sam Grover on 12/9/15.
 //  Copyright © 2015 TheHolyGrail. All rights reserved.

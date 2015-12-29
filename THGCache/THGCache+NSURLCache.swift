@@ -1,6 +1,6 @@
 //
-//  NSURLCache+THGWebService.swift
-//  SwallowExample
+//  THGCache+NSURLCache.swift
+//  THGCache
 //
 //  Created by Sam Grover on 11/19/15.
 //  Copyright © 2015 TheHolyGrail. All rights reserved.

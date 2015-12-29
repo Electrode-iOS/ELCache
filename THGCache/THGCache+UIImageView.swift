@@ -1,5 +1,5 @@
 //
-//  URLCache+UIImageView.swift
+//  THGCache+UIImageView.swift
 //  THGCache
 //
 //  Created by Sam Grover on 12/27/15.
@@ -9,9 +9,9 @@
 import UIKit
 import THGFoundation
 
-extension UIImageView {
+public extension UIImageView {
     
-    var urlAssociationKey: String {
+    internal var urlAssociationKey: String {
         return "io.theholygrail.THGCache.UIImageView.NSURL"
     }
     

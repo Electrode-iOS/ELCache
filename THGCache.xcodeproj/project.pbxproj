@@ -11,8 +11,8 @@
 		22065B681C30D13300B781DA /* THGCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22065B5D1C30D13300B781DA /* THGCache.framework */; };
 		22065B6D1C30D13300B781DA /* THGCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22065B6C1C30D13300B781DA /* THGCacheTests.swift */; };
 		22065B7C1C30D24200B781DA /* MemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22065B771C30D24200B781DA /* MemoryCache.swift */; };
-		22065B7D1C30D24200B781DA /* NSURLCache+THGWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22065B781C30D24200B781DA /* NSURLCache+THGWebService.swift */; };
-		22065B7E1C30D24200B781DA /* NSURLRequest+THGWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22065B791C30D24200B781DA /* NSURLRequest+THGWebService.swift */; };
+		22065B7D1C30D24200B781DA /* THGCache+NSURLCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22065B781C30D24200B781DA /* THGCache+NSURLCache.swift */; };
+		22065B7E1C30D24200B781DA /* THGCache+NSURLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22065B791C30D24200B781DA /* THGCache+NSURLRequest.swift */; };
 		22065B7F1C30D24200B781DA /* URLCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22065B7A1C30D24200B781DA /* URLCache.swift */; };
 		22065B801C30D24200B781DA /* URLCache+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22065B7B1C30D24200B781DA /* URLCache+UIImage.swift */; };
 		22065B951C30D34900B781DA /* THGWebService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22065B921C30D30900B781DA /* THGWebService.framework */; };
@@ -20,8 +20,8 @@
 		22065B991C30D7DD00B781DA /* URLCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22065B7A1C30D24200B781DA /* URLCache.swift */; };
 		22065B9A1C30D7EA00B781DA /* URLCache+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22065B7B1C30D24200B781DA /* URLCache+UIImage.swift */; };
 		22065B9B1C30D7F300B781DA /* MemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22065B771C30D24200B781DA /* MemoryCache.swift */; };
-		22065B9E1C30E00200B781DA /* URLCache+UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22065B9D1C30E00200B781DA /* URLCache+UIImageView.swift */; };
-		22065B9F1C30E00200B781DA /* URLCache+UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22065B9D1C30E00200B781DA /* URLCache+UIImageView.swift */; };
+		22065B9E1C30E00200B781DA /* THGCache+UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22065B9D1C30E00200B781DA /* THGCache+UIImageView.swift */; };
+		22065B9F1C30E00200B781DA /* THGCache+UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22065B9D1C30E00200B781DA /* THGCache+UIImageView.swift */; };
 		22065BAF1C30ECB000B781DA /* THGFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22065BA81C30ECA700B781DA /* THGFoundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -85,13 +85,13 @@
 		22065B6C1C30D13300B781DA /* THGCacheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THGCacheTests.swift; sourceTree = "<group>"; };
 		22065B6E1C30D13300B781DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22065B771C30D24200B781DA /* MemoryCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryCache.swift; sourceTree = "<group>"; };
-		22065B781C30D24200B781DA /* NSURLCache+THGWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURLCache+THGWebService.swift"; sourceTree = "<group>"; };
-		22065B791C30D24200B781DA /* NSURLRequest+THGWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURLRequest+THGWebService.swift"; sourceTree = "<group>"; };
+		22065B781C30D24200B781DA /* THGCache+NSURLCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "THGCache+NSURLCache.swift"; sourceTree = "<group>"; };
+		22065B791C30D24200B781DA /* THGCache+NSURLRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "THGCache+NSURLRequest.swift"; sourceTree = "<group>"; };
 		22065B7A1C30D24200B781DA /* URLCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLCache.swift; sourceTree = "<group>"; };
 		22065B7B1C30D24200B781DA /* URLCache+UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLCache+UIImage.swift"; sourceTree = "<group>"; };
 		22065B8C1C30D30900B781DA /* THGWebService.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = THGWebService.xcodeproj; path = ../Swallow/THGWebService.xcodeproj; sourceTree = "<group>"; };
 		22065B971C30D4F900B781DA /* URLCacheTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLCacheTests.swift; sourceTree = "<group>"; };
-		22065B9D1C30E00200B781DA /* URLCache+UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLCache+UIImageView.swift"; sourceTree = "<group>"; };
+		22065B9D1C30E00200B781DA /* THGCache+UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "THGCache+UIImageView.swift"; sourceTree = "<group>"; };
 		22065BA01C30ECA700B781DA /* THGFoundation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = THGFoundation.xcodeproj; path = ../Excalibur/THGFoundation.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,11 +139,11 @@
 			isa = PBXGroup;
 			children = (
 				22065B771C30D24200B781DA /* MemoryCache.swift */,
-				22065B781C30D24200B781DA /* NSURLCache+THGWebService.swift */,
-				22065B791C30D24200B781DA /* NSURLRequest+THGWebService.swift */,
+				22065B781C30D24200B781DA /* THGCache+NSURLCache.swift */,
+				22065B791C30D24200B781DA /* THGCache+NSURLRequest.swift */,
 				22065B7A1C30D24200B781DA /* URLCache.swift */,
 				22065B7B1C30D24200B781DA /* URLCache+UIImage.swift */,
-				22065B9D1C30E00200B781DA /* URLCache+UIImageView.swift */,
+				22065B9D1C30E00200B781DA /* THGCache+UIImageView.swift */,
 				22065B601C30D13300B781DA /* THGCache.h */,
 				22065B621C30D13300B781DA /* Info.plist */,
 			);
@@ -353,10 +353,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				22065B7F1C30D24200B781DA /* URLCache.swift in Sources */,
-				22065B7D1C30D24200B781DA /* NSURLCache+THGWebService.swift in Sources */,
+				22065B7D1C30D24200B781DA /* THGCache+NSURLCache.swift in Sources */,
 				22065B7C1C30D24200B781DA /* MemoryCache.swift in Sources */,
-				22065B9E1C30E00200B781DA /* URLCache+UIImageView.swift in Sources */,
-				22065B7E1C30D24200B781DA /* NSURLRequest+THGWebService.swift in Sources */,
+				22065B9E1C30E00200B781DA /* THGCache+UIImageView.swift in Sources */,
+				22065B7E1C30D24200B781DA /* THGCache+NSURLRequest.swift in Sources */,
 				22065B801C30D24200B781DA /* URLCache+UIImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,7 +368,7 @@
 				22065B9A1C30D7EA00B781DA /* URLCache+UIImage.swift in Sources */,
 				22065B9B1C30D7F300B781DA /* MemoryCache.swift in Sources */,
 				22065B991C30D7DD00B781DA /* URLCache.swift in Sources */,
-				22065B9F1C30E00200B781DA /* URLCache+UIImageView.swift in Sources */,
+				22065B9F1C30E00200B781DA /* THGCache+UIImageView.swift in Sources */,
 				22065B981C30D4F900B781DA /* URLCacheTests.swift in Sources */,
 				22065B6D1C30D13300B781DA /* THGCacheTests.swift in Sources */,
 			);
