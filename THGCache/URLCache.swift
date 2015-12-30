@@ -9,7 +9,7 @@
 import Foundation
 import THGWebService
 
-public typealias FetchURLCompletionClosure = (NSData?, NSError?) -> Void
+public typealias FetchURLCompletionClosure = (MemoryCacheable?, NSError?) -> Void
 
 @objc
 public class URLCache: NSObject {
@@ -60,8 +60,13 @@ public class URLCache: NSObject {
             }
         }
         
-        if !found  && !cacheOnly {
-            fetchFromNetwork(URL, completion: completion)
+        if !found {
+            if cacheOnly {
+                // TODO: Insert proper error
+                completion(nil, nil)
+            } else {
+                fetchFromNetwork(URL, completion: completion)
+            }
         }
     }
     
@@ -91,7 +96,7 @@ public class URLCache: NSObject {
     
     func fetchFromMemory(URL: NSURL, completion: FetchURLCompletionClosure) -> Bool {
         if let resource = memoryCache.fetch(URL.absoluteString) {
-            didFetch(resource, URL: URL, error: nil, completion: completion)
+            completion(resource, nil)
             return true
         }
         return false
@@ -133,11 +138,20 @@ public class URLCache: NSObject {
             .resume()
     }
     
+    // Called when something is fetched from storage or network so that it can be added to the memory cache
     func didFetch(data: NSData?, URL: NSURL, error: NSError?, completion: FetchURLCompletionClosure) {
         if let data = data {
-            memoryCache.store(data, key: URL.absoluteString)
+            if let imageFromData = UIImage(data: data) {
+                if let finalImage = UIImage.decompressed(imageFromData) {
+                    memoryCache.store(finalImage, key: URL.absoluteString)
+                    completion(finalImage, error)
+
+                }
+            } else {
+                memoryCache.store(data, key: URL.absoluteString)
+                completion(data, error)
+            }
         }
-        completion(data, error)
     }
     
 }

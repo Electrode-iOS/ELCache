@@ -27,8 +27,8 @@ class URLCacheTests: XCTestCase {
         let successExpectation = expectationWithDescription("Expected string matched.")
         let expectedString = "User-agent: *\nDisallow: /deny\n"
         if let url = NSURL(string: "http://httpbin.org/robots.txt") {
-            urlCache.fetch(url) { (data: NSData?, error: NSError?) -> Void in
-                if let data = data {
+            urlCache.fetch(url) { (data: MemoryCacheable?, error: NSError?) -> Void in
+                if let data = data as? NSData {
                     if let htmlString = String(data: data, encoding: NSUTF8StringEncoding) {
                         if htmlString == expectedString {
                             successExpectation.fulfill()
@@ -109,6 +109,35 @@ class URLCacheTests: XCTestCase {
         if let url = NSURL(string: "http://httpbin.org/image/jpeg") {
             urlCache.fetchImage(url, cacheOnly: true) {_,_ in
                 storageSuccessExpectation.fulfill()
+            }
+        }
+        
+        waitForExpectationsWithTimeout(0.05, handler: nil)
+    }
+    
+    func testMemoryCache() {
+        let imageURL = "http://httpbin.org/image/jpeg"
+        let networkSuccessExpectation = expectationWithDescription("Network fetched.")
+        if let url = NSURL(string: imageURL) {
+            urlCache.fetchImage(url) {_,_ in
+                networkSuccessExpectation.fulfill()
+            }
+        }
+        waitForExpectationsWithTimeout(1, handler: nil)
+        
+        XCTAssert(urlCache.memoryCache.numberOfItems() == 1)
+        
+        // Remove from storage. Should still exist in memory.
+        urlCache.flushStorageCache()
+        
+        XCTAssert(urlCache.memoryCache.numberOfItems() == 1)
+        
+        // But it shouldn't be returned when queried because that should be looking into storage cache to check validity
+        let memoryFailureExpectation = expectationWithDescription("Image not found.")
+        if let url = NSURL(string: imageURL) {
+            urlCache.fetchImage(url, cacheOnly: true) {image,_ in
+                memoryFailureExpectation.fulfill()
+                XCTAssertNil(image)
             }
         }
         

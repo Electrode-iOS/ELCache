@@ -47,18 +47,24 @@ extension UIImage {
     
 }
 
+extension UIImage : MemoryCacheable {
+    
+    public var sizeInBytes : Int {
+        return Int(self.size.width * self.size.height * 4) // Approximation
+    }
+    
+}
+
 extension URLCache {
     
     /// An image optimized fetch method. Calls `fetch` and decompresses the image for display.
     public func fetchImage(URL: NSURL, cacheOnly: Bool = false, completion: FetchImageURLCompletionClosure) {
-        fetch(URL, cacheOnly: cacheOnly) { (data: NSData?, error: NSError?) -> Void in
-            var image: UIImage? = nil
-            if let imageData = data {
-                if let imageFromData = UIImage(data: imageData) {
-                    image = UIImage.decompressed(imageFromData)
-                }
+        fetch(URL, cacheOnly: cacheOnly) { (resource: MemoryCacheable?, error: NSError?) -> Void in
+            if let image = resource as? UIImage {
+                completion(image, error)
+            } else {
+                completion(nil, error)
             }
-            completion(image, error)
         }
     }
     
