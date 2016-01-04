@@ -14,10 +14,10 @@ public typealias FetchURLCompletionClosure = (MemoryCacheable?, NSError?) -> Voi
 @objc
 public class URLCache: NSObject {
     
-    var activeServiceTasks: [String: ServiceTask]
-    let memoryCache = MemoryCache.sharedMemoryCache
+    internal var activeServiceTasks: [String: ServiceTask]
+    internal let memoryCache = MemoryCache.sharedMemoryCache
     
-    static let sharedURLCache = URLCache()
+    public static let sharedURLCache = URLCache()
     
     override init() {
         activeServiceTasks = [String: ServiceTask]()
