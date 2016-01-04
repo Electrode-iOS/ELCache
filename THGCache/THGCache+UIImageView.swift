@@ -52,10 +52,12 @@ public extension UIImageView {
     }
     
     internal func processURLFetch(image: UIImage?, error: NSError?, completion: FetchImageURLCompletionClosure) {
-        if let image = image {
-            self.image = image
-        }
-        
-        completion(image, error)
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            if let image = image {
+                self.image = image
+            }
+            
+            completion(image, error)
+        })
     }
 }
