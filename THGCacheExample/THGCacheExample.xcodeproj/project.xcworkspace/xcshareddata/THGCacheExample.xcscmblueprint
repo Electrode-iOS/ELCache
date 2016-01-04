@@ -1,0 +1,37 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "644EF5F2B129DF3ACF73FDA37ABDE3714C394F3C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "644EF5F2B129DF3ACF73FDA37ABDE3714C394F3C" : 0,
+    "8793D34A7BF94DA191D8F935B1E0425A8C1B2681" : 0,
+    "CE2F8AC890B5C51B8DA5BFCB82B80A4BB17ABABF" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "C381811D-94A4-408B-856B-A203BB35575F",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "644EF5F2B129DF3ACF73FDA37ABDE3714C394F3C" : "Historian\/",
+    "8793D34A7BF94DA191D8F935B1E0425A8C1B2681" : "Excalibur\/",
+    "CE2F8AC890B5C51B8DA5BFCB82B80A4BB17ABABF" : "Swallow\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "THGCacheExample",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "THGCacheExample\/THGCacheExample.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:TheHolyGrail\/Historian.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "644EF5F2B129DF3ACF73FDA37ABDE3714C394F3C"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:TheHolyGrail\/Excalibur.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8793D34A7BF94DA191D8F935B1E0425A8C1B2681"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:TheHolyGrail\/Swallow.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "CE2F8AC890B5C51B8DA5BFCB82B80A4BB17ABABF"
+    }
+  ]
+}
