@@ -1,6 +1,6 @@
-# Historian
-THGCache
+# ELCache
+ELCache
 
 # Dependencies
-[Excalibur](https://github.com/TheHolyGrail/Excalibur), [Swallow](https://github.com/TheHolyGrail/Swallow).
+[ELFoundation](https://github.com/Electrode-iOS/ELFoundation), [ELWebService](https://github.com/Electrode-iOS/ELWebService).
 
